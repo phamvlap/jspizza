@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="/assets/fontawesome-free-5.12.1-web/css/all.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/fontawesome-free-5.12.1-web/css/all.css">
+  <link rel="stylesheet" href="/assets/css/login_form.css">
 </head>
 <body>
   <header>
@@ -54,6 +56,92 @@
   <footer>
 
   </footer>
+
+  <div class="modal-login">
+    <div class="login-container rounded-2">
+      <div class="close-button rounded-2">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="login-title text-uppercase">
+        <h1>chào mừng bạn đến với pizza</h1>
+      </div>
+      <div class="login-form">
+        <div class="form-container">
+          <form action="">
+            <div class="form-info d-flex">
+              <div class="left-column">
+                <div class="item-info">
+                  <label class="item-name fw-bold" for="">Tên</label>
+                  <input class="item-input content-input rounded-2 border-1" name="name" type="text" required>
+                </div>
+                <div class="item-info">
+                  <div class="birthday-gender d-flex">
+                    <div class="birthday col">
+                      <label class="item-name fw-bold" for="">Ngày sinh</label>
+                      <input class="item-input content-input rounded-2 border-1" type="date">
+                    </div>
+
+                    <div class="gender col">
+                      <label class="item-name fw-bold" for="">Giới tính</label>
+                      <div class="item-input d-flex justify-content-center">
+                        <div class="gender-radio">
+                          <input type="radio" name="gender" checked>
+                          <p class="d-inline-block">Nam</p>
+                        </div>
+                        <div class="gender-radio">
+                          <input type="radio" name="gender">
+                          <p class="d-inline-block">Nữ</p>
+                        </div>
+                        <div class="gender-radio">
+                          <input type="radio" name="gender">
+                          <p class="d-inline-block">Khác</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-info">
+                  <label class="item-name fw-bold" for="">Email</label>
+                  <input class="item-input content-input rounded-2 border-1" type="email" required>
+                </div>
+                <div class="item-info">
+                  <label class="item-name fw-bold" for="">Số điện thoại</label>
+                  <input class="item-input content-input rounded-2 border-1" type="text" required>
+                </div>
+              </div>
+
+              <div class="right-column">
+                <div class="item-info">
+                  <label class="item-name fw-bold" for="">Mật khẩu</label>
+                  <input class="item-input content-input rounded-2 border-1" type="password" required>
+                </div>
+                <div class="item-info">
+                  <label class="item-name fw-bold" for="">Nhập lại mật khẩu</label>
+                  <input class="item-input content-input rounded-2 border-1" type="password" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-constraint">
+              <div class="constraint-content d-flex align-items-center">
+                <input class="checkbox" type="checkbox">
+                <p class="context">Tôi đồng ý trở thành Thành viên PizzaHot và chấp nhận các Điều khoản & Điều kiện và Chính sách bảo mật của PizzaHot.</p>
+              </div>
+            </div>
+
+            <div class="form-submit d-flex justify-content-center">
+              <div class="button-submit">
+                <button class="text-uppercase fw-bold border-0 rounded-5">đăng ký</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="/assets/js/login_form.js"></script>
   <script src="/bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>

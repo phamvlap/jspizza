@@ -1,0 +1,110 @@
+.modal-login {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.open {
+    display: flex;
+}
+.login-container {
+    width: 65%;
+    background-color: white;
+    position: relative;
+    padding: 20px 40px;
+}
+.close-button {
+    padding: 0 15px;
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--main-background-color);
+}
+.close-button:hover {
+    cursor: pointer;
+}
+.close-button:active {
+    opacity: 0.8;
+}
+.login-title {
+    text-align: center;
+}
+.left-column, .right-column {
+    width: 50%;
+    padding: 0 10px;
+}
+.item-info .item-name {
+    display: block;
+}
+.item-info {
+    padding: 6px 0;
+}
+.item-input {
+    width: 100%;
+    height: 36px;
+}
+.item-input .gender-radio {
+    width: calc(100%/3);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* margin: auto; */
+}
+.constraint-content {
+    padding: 10px;
+}
+.constraint-content .context {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 8px;
+}
+.constraint-content .checkbox {
+    width: 20px;
+    height: 20px;
+}
+.constraint-content .checkbox:checked {
+    accent-color: var(--main-background-color);
+}
+.gender-radio > input {
+    align-items: center;
+    width: 20px;
+}
+.gender-radio > input:checked {
+    accent-color: var(--main-background-color);
+}
+.gender-radio > input:hover {
+    cursor: pointer;
+}
+.gender-radio > p {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 8px;
+}
+.button-submit button {
+    margin: 0;
+    padding: 8px 65px;
+    background-color: var(--main-background-color);
+    font-size: 24px;
+    color: white;
+}
+.form-info, .form-constraint, .form-submit {
+    padding: 10px 0;
+}
+.content-input {
+    padding: 0 8px;
+}
+.birthday-gender .birthday {
+    margin-right: 4px;
+}
+.birthday-gender .gender {
+    margin-left: 4px;
+}
