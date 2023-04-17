@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin tài khoản</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/login_form.css">
+    <link rel="stylesheet" href="/assets/css/nguoidung.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+</head>
+<body>
+    <header>
+        <div class="container header-wrapper pt-2">
+          <div id="logo-section" class="col-2">
+            <div class="wrapper-logo d-grid">
+              <div><a href="index.html"><img class="logo-image rounded-circle" src="/assets/images/logo.avif" alt=""></a></div>
+              <div><a href="index.html"><h2 class="logo-name text-uppercase text-color">pizza</h2></a></div>   
+            </div>
+          </div>
+          <div id="nav-search-section" class="col-9 d-grid">
+            <div class="search-section row align-items-center m-0">
+              <div class="bar-search col-9 rounded-2">
+                <div class="bar-but-search row">
+                  <input class="col-11 input-search" type="text" placeholder="Nhập nội dung tìm kiếm ở đây">
+                  <div class="col-1"><i class="fas fa-search button-search py-2 text-color"></i></div>
+                </div>
+              </div>
+              <div class="account-section col-3">
+                <div class="login d-flex m-0 justify-content-end">
+                  <a class="text-color log-in" href="#">Đăng nhập</a>
+                  <div class="tag-partition"></div>
+                  <a class="text-color register" href="#">Đăng ký</a>
+                </div>
+              </div>
+    
+              <div class="account-login col-3">
+                <div class="login d-flex m-0 justify-content-center align-items-center">
+                    <a href="nguoidung.html"><i class="fa-solid fa-circle-user"></i></a>
+                    <a href="nguoidung.html"><p></p></a>
+                </div>
+              </div>
+    
+            </div>
+            <div class="nav-section pt-2">
+              <ul class="menu-nav d-flex m-0 p-0 align-items-center text-uppercase text-center">
+                <li class="col-3"><a class="text-color" href="index.html">trang chủ</a></li>
+                <li class="col-3"><a class="text-color" href="sanpham.html">sản phẩm</a></li>
+                <li class="col-3"><a class="text-color" href="chuongtrinh.html">chương trình</a></li>
+                <li class="col-3"><a class="text-color" href="lienhe.html">liên hệ</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="cart-section" class="col-1">
+            <div class="d-flex justify-content-center wrapper-shopping-button"><i class="fas fa-shopping-cart shopping-button text-color"></i></div>
+          </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="wrapper-container rounded-2 d-flex">
+            <div class="container-options p-2 col-3">
+                <div class="account-name d-flex align-items-center justify-content-center">
+                    <p class="pe-2">Tài khoản</p>
+                    <strong></strong>
+                </div>
+                <ul class="list-options">
+                    <li class="list-item d-flex align-items-center rounded-2">
+                        <i class="fa-solid fa-circle-user col-2"></i>
+                        <p class="d-inline-block col-10">Thông tin tài khoản </p>
+                    </li>
+                    <li class="list-item d-flex align-items-center rounded-2">
+                        <i class="fa-solid fa-shopping-cart col-2"></i>
+                        <p class="d-inline-block col-10">Giỏ hàng</p>
+                    </li>
+                    <li class="list-item d-flex align-items-center rounded-2 sign-out">
+                        <i class="fa-solid fa-right-from-bracket col-2"></i>
+                        <p class="d-inline-block col-10">Đăng xuất</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="container-user rounded-2 p-2 col-9">
+                <div class="title">
+                    Thông tin tài khoản 
+                </div>
+                <div class="info">
+                    <div class="personal-info">
+                        <div class="decsription pt-2 pb-2 fw-medium">Thông tin cá nhân</div>
+                        <ul>
+                            <li class="pt-1 pb-1 d-flex">
+                                <div class="col-2">Tên: </div>
+                                <div class="name col-9"></div>
+                            </li>
+                            <li class="pt-1 pb-1 d-flex">
+                                <div class="col-2">Ngày sinh:</div>
+                                <div class="birthday col-9"></div>
+                            </li>
+                            <li class="pt-1 pb-1 d-flex">
+                                <div class="col-2">Giới tính: </div>
+                                <div class="gender col-9"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contact-info">
+                        <div class="decsription pt-2 pb-2 fw-medium">Thông tin liên lạc</div>
+                        <ul>
+                            <li class="pt-1 pb-1 d-flex align-items-center">
+                                <i class="fa-solid fa-phone me-2"></i>
+                                <div class="col-2">Số điện thoại:</div>
+                                <div class="phone-number col-9"></div>
+                            </li>
+                            <li class="pt-1 pb-1 d-flex align-items-center">
+                                <i class="fa-solid fa-envelope me-2"></i>
+                                <div class="col-2">Email: </div>
+                                <div class="email col-9"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+
+    <div class="modal-register">
+        <div class="register-container rounded-2">
+          <div class="close-button rounded-2">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="login-title">
+            <h2 class="text-uppercase">đăng ký thành viên</h2>
+            <p>Chào mừng bạn đến với pizza</p>
+          </div>
+          <div class="form-container">
+            <div>
+              <form id="form-register" action="search.html" method="POST">
+                <div class="form-info d-flex">
+    
+                  <div class="form-group-left">
+                    <div class="form-group">
+                      <label class="form-item-name d-block fw-bold" for="">Tên*</label>
+                      <input id="name" class="form-item-input content-input rounded-2 border-1" name="name" type="text">
+                      <div class="error-message"></div>
+                    </div>
+                    <div class="form-group-1">
+                      <div class="birthday-gender d-flex">
+                        <div class="form-group birthday col-5">
+                          <label class="form-item-name d-block fw-bold" for="">Ngày sinh*</label>
+                          <input id="birthday" class="form-item-input content-input rounded-2 border-1" type="date">
+                          <div class="error-message"></div>
+                        </div>
+    
+                        <div class="form-group gender col-7">
+                          <label class="form-item-name d-block fw-bold" for="">Giới tính*</label>
+                          <div id="gender" class="form-item-input d-flex justify-content-start rounded-2 border-0">
+                            <div class="gender-radio">
+                              <input type="radio" name="gender" value="male">
+                              <p class="d-inline-block">Nam</p>
+                            </div>
+                            <div class="gender-radio">
+                              <input type="radio" name="gender" value="female">
+                              <p class="d-inline-block">Nữ</p>
+                            </div>
+                            <div class="gender-radio">
+                              <input type="radio" name="gender" value="other">
+                              <p class="d-inline-block">Khác</p>
+                            </div>
+                          </div>
+                          <div class="error-message"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-item-name d-block fw-bold" for="">Email*</label>
+                      <input id="email" class="form-item-input content-input rounded-2 border-1" type="email">
+                      <div class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-item-name d-block fw-bold" for="">Số điện thoại*</label>
+                      <input id="phone-number" class="form-item-input content-input rounded-2 border-1" type="text">
+                      <div class="error-message"></div>
+                    </div>
+                  </div>
+    
+                  <div class="form-group-right">
+                    <div class="form-group">
+                      <label class="form-item-name d-block fw-bold" for="">Mật khẩu*</label>
+                      <input id="password" class="form-item-input content-input rounded-2 border-1" type="text">
+                      <div class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-item-name d-block fw-bold" for="">Nhập lại mật khẩu*</label>
+                      <input id="confirm-password" class="form-item-input content-input rounded-2 border-1" type="text">
+                      <div class="error-message"></div>
+                    </div>
+                    <div style="margin-top: 16px;"></div>
+                    <div class="note-register p-2">
+                      <div class="content">
+                        <div class="fw-bold">Lưu ý:</div>
+                        <div>
+                          <i class="fa-solid fa-circle-exclamation icon-warning"></i>
+                          <span class="ps-1">(*): phần bắt buộc</span>
+                        </div>
+                        <div>
+                          <i class="fa-solid fa-circle-exclamation icon-warning"></i>
+                          <span class="ps-1">Mật khẩu chứa ít nhất 8 ký tự</span>
+                        </div>
+                        <div>
+                          <i class="fa-solid fa-circle-exclamation icon-warning"></i>
+                          <span class="ps-1">Độ tuổi đăng ký tối thiểu 16 tuổi</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <div class="form-constraint">
+                  <div class="constraint-content align-items-center">
+                    <div class="content d-flex">
+                      <input id="checkbox" type="checkbox">
+                      <p class="context">Tôi đồng ý trở thành Thành viên PizzaHot và chấp nhận các Điều khoản & Điều kiện và Chính sách bảo mật của PizzaHot.</p>
+                    </div>
+                    <div class="error-message"></div>
+                  </div>
+                </div>
+    
+                <div class="form-submit d-flex justify-content-center">
+                  <div class="button-submit">
+                    <button class="text-uppercase fw-bold border-0 rounded-5" type="submit">đăng ký</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="modal-login">
+        <div class="login-container rounded-2">
+          <div class="close-button rounded-2">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="login-title">
+            <h2 class="text-uppercase">đăng nhập</h2>
+            <p>Welcome to back!</p>
+          </div>
+          <form action="" id="form-login">
+            <div class="form-group">
+              <label class="form-item-name d-block fw-bold" for="">Email*</label>
+              <input id="email" class="form-item-input content-input rounded-2 border-1" type="email">
+              <div class="error-message"></div>
+            </div>
+            <div class="form-group">
+              <label class="form-item-name d-block fw-bold" for="">Mật khẩu*</label>
+              <input id="password" class="form-item-input content-input rounded-2 border-1" type="text">
+              <div class="error-message"></div>
+            </div>
+            <div class="form-submit d-flex justify-content-center">
+              <div class="button-submit">
+                <button class="text-uppercase fw-bold border-0 rounded-5" type="submit">đăng nhập</button>
+              </div>
+            </div>
+          </form>
+          <div class="hint-register p-2">
+            <p>Bạn chưa có tài khoản ?
+              <span class="link-register">Đăng ký ngay</span>
+              hoặc xem thêm về Chính sách quyền lợi thành viên tại cửa hàng của chúng tôi.
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="modal-register-successfull">
+        <div class="alert d-grid">
+          <h1 class="mb-3">Chúc mừng bạn đã đăng ký thành công</h1>
+          <i class="fa-regular fa-circle-check"></i>
+          <div class="return-main-page d-flex justify-content-center align-items-center p-1">
+            <a href="index.html">Trở về trang chủ</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="modal-register-failed">
+        <div class="alert d-grid">
+          <h1 class="mb-3">Tài khoản đã tồn tại</h1>
+          <i class="fa-solid fa-circle-exclamation icon-warning"></i>
+          <div class="return-main-page d-flex justify-content-center align-items-center p-1">
+            <span class="link-login">Đăng nhập</span>
+          </div>
+        </div>
+      </div>
+    
+      <div class="modal-login-successfull">
+        <div class="alert d-grid">
+          <h1 class="mb-3">Đăng nhập thành công</h1>
+          <i class="fa-regular fa-circle-check"></i>
+          <div class="return-main-page d-flex justify-content-center align-items-center p-1">
+            <a href="index.html">Trở về trang chủ</a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="modal-login-failed">
+        <div class="alert d-grid">
+          <h1 class="mb-3">Bạn chưa có tài khoản</h1>
+          <i class="fa-solid fa-circle-exclamation icon-warning"></i>
+          <div class="return-main-page d-flex justify-content-center align-items-center p-1">
+            <span class="link-register-from-login">Đăng ký ngay</span>
+          </div>
+        </div>
+      </div>
+
+    <div class="modals"></div>
+
+    <script src="/assets/js/add_modals.js"></script>
+    <script type="module" src="/assets/js/handler_event.js"></script>
+    <script type="module" src="/assets/js/nguoidung.js"></script>
+</body>
+</html>

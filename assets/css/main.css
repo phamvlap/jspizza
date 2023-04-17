@@ -8,6 +8,9 @@ html {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+#logo-section a {
+    text-decoration: none;
+}
 .text-color {
     color: var(--main-color);
 }
@@ -19,6 +22,7 @@ header {
 }
 .logo-image {
     width: 64px;
+    height: 64px;
 }
 .wrapper-logo {
     justify-items: center;
@@ -36,11 +40,11 @@ header {
     text-align: center;
     text-decoration: none;
 }
+.register {
+    width: 32%;
+}
 .log-in {
     width: 40%;
-}
-.sign-in {
-    width: 32%;
 }
 .bar-search {
     border: 2px solid var(--main-color);
@@ -69,4 +73,13 @@ header {
 }
 .wrapper-logo {
     padding-left: 36px;
+}
+.menu-nav a:hover,
+.account-login a:hover, .shopping-button:hover {
+    color: blue;
+    cursor: pointer;
+}
+.menu-nav a:active,
+.account-login a:active, .shopping-button:active {
+    opacity: 0.6;
 }

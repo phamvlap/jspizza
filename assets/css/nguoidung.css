@@ -1,0 +1,41 @@
+.wrapper-container {
+    margin-top: 20px;
+    border: 1px solid black;
+    background-color: bisque;
+}
+.account-name {
+    padding: 8px 0;
+}
+.account-name strong {
+    font-size: 24px;
+}
+.container-options p {
+    margin: 0;
+}
+.list-options .list-item {
+    padding: 8px 0;
+}
+.list-options .list-item:hover {
+    background-color: darkgrey;
+}
+.list-item i {
+    text-align: center;
+    font-size: 24px;
+}
+.container-user {
+    background-color: aliceblue;
+}
+.container-user .title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 500;
+}
+.decsription {
+    font-size: 20px;
+}
+.info li {
+    list-style-type: none;
+}
+.sign-out {
+    border: 1px solid black;
+}

@@ -1,23 +1,21 @@
-.modal-login {
+/* modal register */
+.modal-register {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
     align-items: center;
     justify-content: center;
     display: none;
 }
-.open {
-    display: flex;
-}
-.login-container {
+.register-container {
     width: 65%;
     background-color: white;
     position: relative;
     padding: 20px 40px;
+    background-image: url(/assets/images/trangchu/BG.jpg);
 }
 .close-button {
     padding: 0 15px;
@@ -37,26 +35,32 @@
 .login-title {
     text-align: center;
 }
-.left-column, .right-column {
+.form-group-left, .form-group-right {
     width: 50%;
     padding: 0 10px;
 }
-.item-info .item-name {
-    display: block;
-}
-.item-info {
+.form-group {
     padding: 6px 0;
 }
-.item-input {
+.form-group-1 {
+    padding: 6px 0;
+}
+.form-item-input {
     width: 100%;
     height: 36px;
+    border: 5px solid var(--main-background-color);
 }
-.item-input .gender-radio {
-    width: calc(100%/3);
+.form-item-input:hover {
+    border-width: 2px;
+    box-shadow: 0 0 3px 0 green;
+}
+.gender .form-item-input:hover {
+    box-shadow: 0 0 3px 0 white;
+}
+.form-item-input .gender-radio {
+    width: calc(30%);
     display: flex;
     justify-content: center;
-    /* align-items: center; */
-    /* margin: auto; */
 }
 .constraint-content {
     padding: 10px;
@@ -67,11 +71,11 @@
     margin-bottom: auto;
     padding-left: 8px;
 }
-.constraint-content .checkbox {
+.constraint-content #checkbox {
     width: 20px;
     height: 20px;
 }
-.constraint-content .checkbox:checked {
+.constraint-content #checkbox:checked {
     accent-color: var(--main-background-color);
 }
 .gender-radio > input {
@@ -87,7 +91,7 @@
 .gender-radio > p {
     margin-top: auto;
     margin-bottom: auto;
-    padding-left: 8px;
+    padding-left: 4px;
 }
 .button-submit button {
     margin: 0;
@@ -107,4 +111,119 @@
 }
 .birthday-gender .gender {
     margin-left: 4px;
+}
+.icon-warning {
+    color: #ffc107;
+}
+/* handler error form */
+.form-error .error-message {
+    color: red;
+}
+.form-error .form-item-input {
+    border: 1px solid red;
+}
+/* modal register successfull */
+.modal-register-successfull, .modal-register-failed, .modal-login-successfull, .modal-login-failed {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modal-register-successfull .alert, .modal-register-failed .alert, .modal-login-successfull .alert, .modal-login-failed .alert {
+    width: 50%;
+    color: white;
+    background-color: var(--main-background-color);
+    font-size: 88px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: goDown 0.5s linear;
+}
+.modal-register-failed .alert {
+    width: 40%;
+}
+.alert a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    margin-top: 8px;
+}
+.link-login {
+    font-size: 16px;
+}
+@keyframes goDown {
+    from {
+        opacity: 0;
+        transform: translateY(-193%);
+        background-color: white;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+        background-color: var(--main-background-color);
+    }
+}
+
+/* modal login */
+.modal-login {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.login-container {
+    width: 55%;
+    background-color: white;
+    position: relative;
+    padding: 20px 40px;
+    background-image: url(/assets/images/trangchu/BG.jpg);
+}
+.hint-register {
+    text-align: justify;
+}
+.hint-register .link-register {
+    color: var(--main-background-color);
+}
+.hint-register .link-register:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.hint-register .link-register:active {
+    opacity: 0.6;
+}
+.link-register-from-login {
+    font-size: 16px;
+}
+.return-main-page {
+
+}
+/* open form */
+.open {
+    display: flex;
+}
+.close {
+    display: none;
+}
+.account-login {
+    color: blue;
+    display: none;
+}
+.account-login i {
+    font-size: 28px;
+}
+.account-login p {
+    margin: 0 4px 0;
+}
+.show-user {
+    display: block;
 }

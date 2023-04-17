@@ -1,0 +1,28 @@
+.container{
+    background-image: url("assets\images\trangchu\BG.jpg");
+    background-repeat: repeat-x;
+}
+
+a>img{
+    height: 600px;
+    width: 1000px;
+}
+.t-center {
+    text-align: center;
+}
+
+.t-shallow {
+    margin-bottom: 2rem;
+}
+.t-brand-font {
+    font-family: PizzaPilgrims,sans-serif;
+    line-height: 1.1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+.t-brand {
+    color: #00cd00;
+}
+.t-alpha {
+    font-size: 2rem;
+}

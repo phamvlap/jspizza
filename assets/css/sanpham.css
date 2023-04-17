@@ -1,0 +1,22 @@
+.search_sp{
+    margin-top: 10px;
+    padding-top: 15px;
+    background: linear-gradient(to bottom, #9af4a4, #fff);
+    border-radius: 15px;
+}
+.pizza-header{
+    border-bottom-color: 1px solid black;
+    padding-top: 5px;
+}
+
+.anchor{
+    border-bottom: 1px solid black;
+    border-left: double black;
+    background: linear-gradient(to bottom, #fff, #d4f5d0);
+    color: #00090f;
+}
+
+.color_btn{
+    background-color: #f79952;
+    border-color: #fff;
+}
