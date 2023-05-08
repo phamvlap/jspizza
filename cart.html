@@ -4,21 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khuyến Mãi</title>
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="./assets/css/chuongtrinh.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Giỏ Hàng Của Bạn</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/fontawesome-free-5.12.1-web/css/all.css"/>
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/sanpham.css">
     <link rel="stylesheet" href="./assets/css/login_form.css">
-
-    <link
-      rel="stylesheet"
-      href="./assets/fontawesome-free-5.12.1-web/css/all.css"
-    />
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="./assets/js/product_setup.js"></script>
+    <script type="module" src="./assets/js/cart.js"></script>
     <link rel="shortcut icon" href="./assets/images/logo3.jpg" type="image/vnd.microsoft.icon" />
   </head>
-
   <body>
     <header>
       <div class="container header-wrapper d-flex pt-2 pb-1">
@@ -29,7 +27,7 @@
             <div><a href="index.html">
               <h2 class="logo-name text-uppercase text-color" style="letter-spacing: 1.5px; color: tomato;">jspizza</h2>
             </a>
-          </div>  
+          </div>   
           </div>
         </div>
         <div id="nav-search-section" class="col-9 d-grid">
@@ -95,7 +93,7 @@
           </div>
         </div>
         <div id="cart-section" class="col-1">
-          <div class="d-flex justify-content-center wrapper-shopping-button"><a href="cart.html"><i class="fas fa-shopping-cart shopping-button text-color"></i></a></div>
+          <div class="d-flex justify-content-center wrapper-shopping-button"><i class="fas fa-shopping-cart shopping-button text-color"></i></div>
         </div>
   
         <div id="nav-mobile" class="col-1">
@@ -162,203 +160,33 @@
         <input class="w-100 px-3 py-2 rounded-5 input-search-mobile" type="text" placeholder="Nhập sản phẩm tìm kiếm ở đây">
       </div>
     </header>
-    
-    
     <main>
-      <div class="container pt-5 chuongtrinh-container">
-        <div class="tintuc-container">
-          <div class="megaweek-container">
-            <a href="uudai.html">
-              <img
-                class="mage-img"
-                src="./assets/images/khuyenmai/megaweek.jpg"
-                alt=""
-              />
-            </a>
-            <h3 class="uudai-title">
-              <a class="uudai" href="uudai.html">
-                ƯU ĐÃI CỰC HOÀNH TRÁNG NĂM 2023: PIZZA JS GIẢM 50% TỔNG HÓA
-                ĐƠN
-              </a>
-            </h3>
-            <div class="description">
-              Bạn biết tin gì chưa? Pizza JS đang có chương trình khuyến mãi
-              Mega Week siêu hoành tráng trong năm 2023 này đấy.
-            </div>
-            <button type="button" class="btn-detail">
-              <a class="uudai" href="uudai.html"
-                >Xem chi tiết</a
-              >
-            </button>
-          </div>
-          <div class="green-container">
-            <a href="greenpizza.html">
-              <img
-                class="green-img"
-                width="269"
-                src="./assets/images/khuyenmai/pizzaTime3.jpg"
-                alt=""
-              />
-            </a>
-            <h3 class="chay-title">
-              <a class="chay" href="greenpizza.html">
-                Độc đáo "PIZZA CHAY" ngon đến bất ngờ</a
-              >
-            </h3>
-            <div class="description">
-              Ăn uống lành mạnh! Vậy pizza chay thì sao?
-            </div>
-          </div>
-        </div>
-        <div class="slide-container container swiper">
-          <div class="swiper-wrapper">
-            <div class="slide-content swiper-slide">
-              <div class="slide-img-item">
-                <img
-                  class="img-item-giamgia img-item"
-                  width="400"
-                  src="./assets/images/khuyenmai/giam70thu2.png"
-                  alt=""
-                />
-              </div>
-              <div class="description-item">
-                <img
-                  class="best-choice"
-                  src="./assets/images/khuyenmai/banner-bestchoice.png"
-                  alt=""
-                />
-                <br>
-                <h2 class="h2-giamgia h2-title">
-                  GIẢM 70% CHO PIZZA THỨ 2-ÁP DỤNG MUA HÀNG MANG VỀ & GIAO TẬN
-                  NƠI
-                </h2>
-                <p>
-                  Mua Pizza size M hoặc L kèm 1 thức uống lớn hoặc 2 thức uống
-                  nhỏ nguyên giá được giảm 70% cho bánh Pizza thứ 2 cùng size có
-                  giá bằng hoặc thấp hơn Pizza thứ nhất.
-                </p>
-                <br>
-                <div
-                  class="d-flex justify-content-start flex-wrap btn-container"
-                >
-                  <a href="sanpham.html">
-                    <button class="btn btn-giam">
-                      <span> Đặt size M + 1 nước lớn</span>
-                    </button>
-                  </a>
-                  <a href="sanpham.html">
-                    <button class="btn btn-giam">
-                      <span> Đặt size L + 1 nước lớn</span>
-                    </button>
-                  </a>
-                  <a href="sanpham.html">
-                    <button class="btn btn-giam">
-                      <span> Đặt size M + 2 nước nhỏ</span>
-                    </button>
-                  </a>
-                  <a href="sanpham.html">
-                    <button class="btn btn-giam">
-                      <span> Đặt size L + 2 nước nhỏ</span>
-                    </button>
-                  </a>
+        <main>
+            <section class="py-4 pb-md-6">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-10">
+                            <div class="d-flex">
+                                <h6>Giỏ hàng của bạn</h6>
+                            </div>
+                            <table class="table">
+                              <thead>
+                              </thead>
+                              <tbody id="tbody">
+                                
+                              </tbody>
+                            </table>
+                            <div id="cashier">
+                        
+                              
+                          
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="slide-content swiper-slide">
-              <div class="slide-img-item">
-                <img
-                  class="img-item-team img-item"
-                  width="400"
-                  src="./assets/images/khuyenmai/family.png"
-                  alt=""
-                />
-              </div>
-              <div class="description-item">
-                <img
-                  class="best-choice"
-                  src="./assets/images/khuyenmai/banner-bestchoice.png"
-                  alt=""
-                />
-                <h2 class="h2-team h2-title">DEAL SIÊU TO CHO NHÓM</h2>
-                <br>
-                <p>
-                  * Combo 209,000đ cho 2 người gồm 1 pizza size M + 2 thức uống nhỏ
-                </p>
-                <p>
-                  * Combo 309,000đ cho 3-4 người gồm 1 pizza size L + 2 phần món
-                  phụ + 2 thức uống nhỏ
-                </p>
-                <p>
-                  * Combo 449,000đ cho 4-5 người gồm 2 pizza size L + 2 phần món
-                  phụ + 1 thức uống lớn
-                </p>
-                <div
-                  class="d-flex justify-content-start flex-wrap btn-container"
-                >
-                  <a href="sanpham.html">
-                    <button class="btn btn-giam">
-                      <span>COMBO 209k</span>
-                    </button>
-                  </a>
-                  <a href="sanpham.html">
-                    <button class="btn btn-giam">
-                      <span>COMBO 309k</span>
-                    </button>
-                  </a>
-                  <a href="sanpham.html">
-                    <button class="btn btn-giam">
-                      <span>COMBO 409k</span>
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="slide-content-3 slide-content swiper-slide">
-              <div class="slide-img-item">
-                <img
-                  class="img-item-thu3 img-item"
-                  width="400"
-                  src="./assets/images/khuyenmai/khuyenmaithu3.png"
-                  alt=""
-                />
-              </div>
-              <div class="description-item">
-                <img
-                  class="best-choice"
-                  src="./assets/images/khuyenmai/banner-bestchoice.png"
-                  alt=""
-                />
-                <br>
-                <h2 class="h2-thu3 h2-title">THỨ 3 ĐẾN RỒI</h2>
-                <h3>Mua 1 tặng 1!!! Click 1 được 2</h3>
-                <p>*Áp dụng khi mua 1 pizza 9" kèm nước bất kỳ </p>
-                <p>*Áp dụng khi mua 1 pizza 12" kèm nước bất kỳ </p>
-                
-                <p>*Áp dụng cho mọi hình thức thanh toán*</p>
-                <div
-                  class="d-flex justify-content-start flex-wrap btn-container"
-                >
-                  <a href="sanpham.html">
-                    <button class="btn btn-giam">
-                      <span>Đặt size 9" + 1 nước</span>
-                    </button>
-                  </a>
-                  <a href="sanpham.html">
-                    <button class="btn btn-giam">
-                      <span>Đặt size 12" + 1 nước</span>
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
+            </section>
+        </main>
     </main>
-    
     
     <footer class="">
       <div class="footer-section">
@@ -426,15 +254,48 @@
         </div>
       </div>
     </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+          </div>
+          <div class="modal-body">
+            <div class="modal-content" style="border: 2px solid black;">
+              <div class="row">
+                <div class="col-4" id="img-modal" >
+                  <img src="" alt="" class="image-here" style="z-index: -100;">
+                </div>
+                <div class="col-8">
+                  <p id="description" style="float: right;"></p>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-left: 1px; margin-top: 3px;">
+              <div class="qual-area" style="float: right;">
+                <button id="decreaseBtn" class="btn btn-secondary">-</button>
+                <label id="qual" style="margin-top: 9px; margin-left: 9px; margin-right: 9px;"></label>
+                <button id="increaseBtn" class="btn btn-secondary">+</button>
+              </div>
+              <div class="col-3" id="price"></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            <button type="button" class="btn btn-primary" id="total">Thêm vào vỏ hàng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modals"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
-    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+      <script src="./assets/js/modals.js"></script>
+      <script type="module" src="./assets/js/handler_event.js"></script>
+      <script src="./assets/js/swiper-bundle.min.js"></script> 
+      <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+      
+    </div>
   </body>
-
-  <div class="modals"></div>
-
-  <script src="./assets/js/modals.js"></script>
-  <script type="module" src="./assets/js/handler_event.js"></script>
-  <script src="./assets/js/swiper-bundle.min.js"></script>
-  <script src="./assets/js/chuongtrinh.js"></script>
-  <script type="module" src="./assets/js/search_product.js"></script>
 </html>

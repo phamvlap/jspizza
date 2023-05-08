@@ -1,22 +1,23 @@
 const getInfoUser = function(idForm, arraySelector) {
     const form = document.querySelector(idForm);
     var inputElements = arraySelector.reduce(function(selectors, selector) {
-        return selectors.concat(form.querySelector(selector));
+        return selectors.concat(form.querySelector(`[name='${selector}']`));
     }, []);
     var user = {};
     if(form) {
         inputElements.forEach(function(inputElement) {
             if(inputElement){
-                if(inputElement.id == 'gender'){
+                if(inputElement.name == undefined){
                     const nodeListGender = inputElement.querySelectorAll('input');
+                    console.log(nodeListGender)
                     Array.from(nodeListGender).forEach(function(input) {
                         if(input.matches(':checked')){
-                            user[`${inputElement.id}`] = input.value;
+                            user['gender'] = input.value;
                         }
                     })
                 }
                 else {
-                    user[`${inputElement.id}`] = inputElement.value;
+                    user[`${inputElement.name}`] = inputElement.value;
                 }
             }
         })     

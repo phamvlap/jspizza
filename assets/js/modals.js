@@ -1,5 +1,6 @@
 
-const modals = `<div class="modal-register">
+const modals = `
+<div class="modal-register">
 <div class="register-container rounded-2">
   <div class="close-button rounded-2">
     <i class="fa-solid fa-xmark"></i>
@@ -11,35 +12,35 @@ const modals = `<div class="modal-register">
   <div class="form-container">
     <div>
       <form id="form-register" action="search.html" method="POST">
-        <div class="form-info d-flex">
+        <div class="form-info d-lg-flex">
 
-          <div class="form-group-left">
+          <div class="form-group-left col-lg-6">
             <div class="form-group">
               <label class="form-item-name d-block fw-bold" for="">Tên*</label>
-              <input id="name" class="form-item-input content-input rounded-2 border-1" name="name" type="text">
+              <input name="name" class="form-item-input content-input rounded-2 border-1" type="text">
               <div class="error-message"></div>
             </div>
             <div class="form-group-1">
               <div class="birthday-gender d-flex">
                 <div class="form-group birthday col-5">
                   <label class="form-item-name d-block fw-bold" for="">Ngày sinh*</label>
-                  <input id="birthday" class="form-item-input content-input rounded-2 border-1" type="date">
+                  <input name="birthday" class="form-item-input content-input rounded-2 border-1" type="date">
                   <div class="error-message"></div>
                 </div>
 
                 <div class="form-group gender col-7">
                   <label class="form-item-name d-block fw-bold" for="">Giới tính*</label>
-                  <div id="gender" class="form-item-input d-flex justify-content-start rounded-2 border-0">
+                  <div name="gender" class="form-item-input d-flex justify-content-start rounded-2 border-0">
                     <div class="gender-radio">
-                      <input type="radio" name="gender" value="male">
+                      <input type="radio" name="gender-selection" value="male">
                       <p class="d-inline-block">Nam</p>
                     </div>
                     <div class="gender-radio">
-                      <input type="radio" name="gender" value="female">
+                      <input type="radio" name="gender-selection" value="female">
                       <p class="d-inline-block">Nữ</p>
                     </div>
                     <div class="gender-radio">
-                      <input type="radio" name="gender" value="other">
+                      <input type="radio" name="gender-selection" value="other">
                       <p class="d-inline-block">Khác</p>
                     </div>
                   </div>
@@ -49,25 +50,29 @@ const modals = `<div class="modal-register">
             </div>
             <div class="form-group">
               <label class="form-item-name d-block fw-bold" for="">Email*</label>
-              <input id="email" class="form-item-input content-input rounded-2 border-1" type="email">
+              <input name="email" class="form-item-input content-input rounded-2 border-1" type="email">
               <div class="error-message"></div>
             </div>
             <div class="form-group">
               <label class="form-item-name d-block fw-bold" for="">Số điện thoại*</label>
-              <input id="phone-number" class="form-item-input content-input rounded-2 border-1" type="text">
+              <input name="phone-number" class="form-item-input content-input rounded-2 border-1" type="text">
               <div class="error-message"></div>
             </div>
           </div>
 
-          <div class="form-group-right">
-            <div class="form-group">
+          <div class="form-group-right col-lg-6">
+            <div class="form-group cell-form-password">
               <label class="form-item-name d-block fw-bold" for="">Mật khẩu*</label>
-              <input id="password" class="form-item-input content-input rounded-2 border-1" type="text">
+              <input name="password" class="form-item-input content-input rounded-2 border-1" type="password">
+              <i class="fa-regular fa-eye show-password"></i>
+              <i class="fa-regular fa-eye-slash hidden-password"></i>
               <div class="error-message"></div>
             </div>
-            <div class="form-group">
+            <div class="form-group cell-form-password">
               <label class="form-item-name d-block fw-bold" for="">Nhập lại mật khẩu*</label>
-              <input id="confirm-password" class="form-item-input content-input rounded-2 border-1" type="text">
+              <input name="confirm-password" class="form-item-input content-input rounded-2 border-1" type="password">
+              <i class="fa-regular fa-eye show-password"></i>
+              <i class="fa-regular fa-eye-slash hidden-password"></i>
               <div class="error-message"></div>
             </div>
             <div style="margin-top: 16px;"></div>
@@ -94,7 +99,7 @@ const modals = `<div class="modal-register">
         <div class="form-constraint">
           <div class="constraint-content align-items-center">
             <div class="content d-flex">
-              <input id="checkbox" type="checkbox">
+              <input name="checkbox" type="checkbox">
               <p class="context">Tôi đồng ý trở thành Thành viên PizzaHot và chấp nhận các Điều khoản & Điều kiện và Chính sách bảo mật của PizzaHot.</p>
             </div>
             <div class="error-message"></div>
@@ -113,39 +118,41 @@ const modals = `<div class="modal-register">
 </div>
 
 <div class="modal-login">
-<div class="login-container rounded-2">
-  <div class="close-button rounded-2">
-    <i class="fa-solid fa-xmark"></i>
-  </div>
-  <div class="login-title">
-    <h2 class="text-uppercase">đăng nhập</h2>
-    <p>Welcome to back!</p>
-  </div>
-  <form action="" id="form-login">
-    <div class="form-group">
-      <label class="form-item-name d-block fw-bold" for="">Email*</label>
-      <input id="email" class="form-item-input content-input rounded-2 border-1" type="email">
-      <div class="error-message"></div>
+  <div class="login-container rounded-2">
+    <div class="close-button rounded-2">
+      <i class="fa-solid fa-xmark"></i>
     </div>
-    <div class="form-group">
-      <label class="form-item-name d-block fw-bold" for="">Mật khẩu*</label>
-      <input id="password" class="form-item-input content-input rounded-2 border-1" type="text">
-      <div class="error-message"></div>
+    <div class="login-title">
+      <h2 class="text-uppercase">đăng nhập</h2>
+      <p>Welcome to back!</p>
     </div>
-    <div class="form-submit d-flex justify-content-center">
-      <div class="button-submit">
-        <button class="text-uppercase fw-bold border-0 rounded-5" type="submit">đăng nhập</button>
+    <form action="" id="form-login">
+      <div class="form-group">
+        <label class="form-item-name d-block fw-bold" for="">Email*</label>
+        <input name="email" class="form-item-input content-input rounded-2 border-1" type="email">
+        <div class="error-message"></div>
       </div>
+      <div class="form-group cell-form-password">
+        <label class="form-item-name d-block fw-bold" for="">Mật khẩu*</label>
+        <input name="password" class="form-item-input content-input rounded-2 border-1" type="password">
+        <i class="fa-regular fa-eye show-password"></i>
+        <i class="fa-regular fa-eye-slash hidden-password"></i>
+        <div class="error-message"></div>
+      </div>
+      <div class="form-submit d-flex justify-content-center">
+        <div class="button-submit">
+          <button class="text-uppercase fw-bold border-0 rounded-5" type="submit">đăng nhập</button>
+        </div>
+      </div>
+    </form>
+    <div class="hint-register p-2">
+      <p>Bạn chưa có tài khoản ?
+        <span class="link-register">Đăng ký ngay</span>
+        hoặc xem thêm về Chính sách quyền lợi thành viên tại cửa hàng của chúng tôi.
+      </p>
     </div>
-  </form>
-  <div class="hint-register p-2">
-    <p>Bạn chưa có tài khoản ?
-      <span class="link-register">Đăng ký ngay</span>
-      hoặc xem thêm về Chính sách quyền lợi thành viên tại cửa hàng của chúng tôi.
-    </p>
   </div>
-</div>
-</div>
+  </div>
 
 <div class="modal-register-successfull">
 <div class="alert d-grid">

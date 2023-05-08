@@ -1,28 +1,17 @@
-.container{
-    background-image: url("assets\images\trangchu\BG.jpg");
-    background-repeat: repeat-x;
+
+.carousel-item > img{
+    border-radius: 20px;
 }
 
-a>img{
-    height: 600px;
-    width: 1000px;
+.underline{
+    position: relative;
+    width: 90%;
+    height: 1px;
+    content: none;
+    background-color: black;
 }
-.t-center {
-    text-align: center;
-}
+#box3 img{
+    position: relative;
+    height: 400px;
 
-.t-shallow {
-    margin-bottom: 2rem;
-}
-.t-brand-font {
-    font-family: PizzaPilgrims,sans-serif;
-    line-height: 1.1;
-    letter-spacing: 0;
-    text-transform: uppercase;
-}
-.t-brand {
-    color: #00cd00;
-}
-.t-alpha {
-    font-size: 2rem;
 }

@@ -12,13 +12,13 @@ function getElementParent(element, selector){
 function resetForm(idForm, arraySelector) {
     const form = document.querySelector(idForm);
     var inputElements = arraySelector.reduce(function (selectors, selector) {
-        return selectors.concat(form.querySelector(selector));
+        return selectors.concat(form.querySelector(`input[name='${selector}']`));
     }, []);
     if (form) {
         inputElements.forEach(function (inputElement) {
             if (inputElement) {
-                if (inputElement.id === 'checkbox') {
-                    const checkElement = form.querySelector('#checkbox');
+                if (inputElement.name === 'checkbox') {
+                    const checkElement = form.querySelector("input[name='checkbox']");
                     const parentCheck = getElementParent(checkElement, '.constraint-content');
                     const errorElement = parentCheck.querySelector('.error-message');
                     checkElement.onclick = () => {

@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     display: none;
+    z-index: 100;
 }
 .register-container {
     width: 65%;
@@ -36,7 +37,7 @@
     text-align: center;
 }
 .form-group-left, .form-group-right {
-    width: 50%;
+    /* width: 50%; */
     padding: 0 10px;
 }
 .form-group {
@@ -115,6 +116,21 @@
 .icon-warning {
     color: #ffc107;
 }
+.cell-form-password {
+    position: relative;
+}
+.show-password {
+    display: none;
+}
+.show-password, .hidden-password {
+    position: absolute;
+    right: 8px;
+    top: 39px;
+}
+.show-password:hover, .hidden-password:hover {
+    cursor: pointer;
+}
+
 /* handler error form */
 .form-error .error-message {
     color: red;
@@ -133,6 +149,7 @@
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 200;
 }
 .modal-register-successfull .alert, .modal-register-failed .alert, .modal-login-successfull .alert, .modal-login-failed .alert {
     width: 50%;
@@ -180,6 +197,7 @@
     display: none;
     justify-content: center;
     align-items: center;
+    z-index: 100;
 }
 .login-container {
     width: 55%;
@@ -204,6 +222,11 @@
 .link-register-from-login {
     font-size: 16px;
 }
+.return-main-page:hover,
+.link-register-from-login:hover {
+    cursor: pointer;
+    color: blue;
+}
 .return-main-page {
 
 }
@@ -226,4 +249,20 @@
 }
 .show-user {
     display: block;
+}
+/* responsive */
+@media only screen and (max-width: 1023px) and (min-width: 576px) {
+    .login-container {
+        width: 80%;
+    }
+    .register-container {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .login-container, .register-container {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }

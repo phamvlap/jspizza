@@ -59,6 +59,17 @@ const confirmPassword = function(inputElement, password) {
     }
     return msgError;
 }
+function checkPasswordCurrent(inputElement){
+    var msgError;
+    if(currentUser != null) {
+        if(inputElement.value != currentUser['password'])
+            msgError = 'Mật khẩu không chính xác';
+        else
+            msgError = '';
+    }
+    else msgError = '';
+    return msgError;
+}
 const isBirthday = function(inputElement, validAge) {
     const valueBirthday = inputElement.value;
     const parts = valueBirthday.split('-');
@@ -102,45 +113,57 @@ const checkGender = function(inputElement, messageError) {
     }
     return msgError;
 }
-// const form = document.querySelector('#form-register');
-// const inputElement = form.querySelector('#gender');
-// checkGender(inputElement);
+
 function isValidationInputData(form, inputElement){
     var valid = true;
     const parentElement = getElementParent(inputElement, '.form-group');
     const elementMessage = parentElement.querySelector('.error-message');
     var msgError;
     msgError = isRequired(inputElement, 'Vui lòng nhập trường này');
-    const selector = `#${inputElement.id}`;
+    const selector = `${inputElement.name}`;
     switch(selector){
-        case '#birthday':
+        case 'birthday':
             if(msgError == ''){
                 msgError = isBirthday(inputElement, 16);
             }
             break;
-        case '#gender':
+        case 'gender':
             if(msgError == ''){
                 msgError = checkGender(inputElement, 'Vui lòng nhập trường này');
             }
             break;
-        case '#email':
+        case 'email':
             if(msgError == ''){
                 msgError = checkEmail(inputElement, 'Email không hợp lệ');
             }
             break;
-        case '#phone-number':
+        case 'phone-number':
             if(msgError == ''){
                 msgError = checkPhoneNumber(inputElement, 'Số điện thoại không hợp lệ');
             }
             break;
-        case '#password':
+        case 'password':
+            if(msgError == ''){
+                msgError = minLength(inputElement, 8);
+            }
+            if(msgError == '' && currentUser != null){
+                msgError = checkPasswordCurrent(inputElement);
+            }
+            break;
+        case 'confirm-password':
+            if(msgError == ''){
+                const pwdInput = form.querySelector("input[name='password']");
+                msgError = confirmPassword(inputElement, pwdInput.value);
+            }
+            break;
+        case 'new-password':
             if(msgError == ''){
                 msgError = minLength(inputElement, 8);
             }
             break;
-        case '#confirm-password':
+        case 'confirm-new-password':
             if(msgError == ''){
-                const pwdInput = form.querySelector('#password');
+                const pwdInput = form.querySelector("input[name='new-password']");
                 msgError = confirmPassword(inputElement, pwdInput.value);
             }
             break;
@@ -159,13 +182,13 @@ function isValidationInputData(form, inputElement){
 function submitForm(idForm, arraySelector) {
     const form = document.querySelector(idForm);
     var inputElements = arraySelector.reduce(function(selectors, selector) {
-        return selectors.concat(form.querySelector(selector));
+        return selectors.concat(form.querySelector(`[name='${selector}']`));
     }, []);
     if(form) {
         inputElements.forEach(function(inputElement) {
             if(inputElement){
-                if(inputElement.id === 'checkbox'){
-                    const checkElement = form.querySelector('#checkbox');
+                if(inputElement.name === 'checkbox'){
+                    const checkElement = form.querySelector("input[name='checkbox']");
                     const parentCheck = getElementParent(checkElement, '.constraint-content');
                     const errorElement = parentCheck.querySelector('.error-message');
                     checkElement.onclick = () => {
@@ -176,8 +199,8 @@ function submitForm(idForm, arraySelector) {
                 else {
                     inputElement.onblur = function(){
                         isValidationInputData(form, inputElement);
-                        if(inputElement.id === 'password' && idForm === '#form-register'){
-                            const confirmPassword = form.querySelector('#confirm-password');
+                        if(inputElement.name === 'password' && idForm === '#form-register'){
+                            const confirmPassword = form.querySelector("input[name='confirm-password']");
                             if(confirmPassword.value != '')
                                 isValidationInputData(form, confirmPassword);  
                         }
@@ -200,7 +223,7 @@ function submitForm(idForm, arraySelector) {
             var isValidInput;
             inputElements.forEach(function(inputElement) {
                 if(inputElement){
-                    if(inputElement.id !== 'checkbox'){
+                    if(inputElement.name !== 'checkbox'){
                         isValidInput = isValidationInputData(form, inputElement); 
                         if(isValidInput == false) {
                             isValidForm = false;
@@ -209,7 +232,7 @@ function submitForm(idForm, arraySelector) {
                 }
             });
             if(idForm === '#form-register'){
-                const checkElement = form.querySelector('#checkbox');
+                const checkElement = form.querySelector("input[name='checkbox']");
                 const parentCheck = getElementParent(checkElement, '.constraint-content');
                 const errorElement = parentCheck.querySelector('.error-message');
                 if(isValidForm){
@@ -223,14 +246,14 @@ function submitForm(idForm, arraySelector) {
                     var keyInput;
                     inputElements.forEach(function(inputElement) {
                         if(inputElement){
-                            if(inputElement.id === 'email'){
+                            if(inputElement.name === 'email'){
                                 keyInput = inputElement.value;
                             }
                         }
                     });
                     const tmpUser = window.localStorage.getItem(keyInput);
                     if(tmpUser === null){ // account not exist
-                        const user = getInfoUser(idForm, ['#name', '#birthday', '#gender', '#email', '#phone-number', '#password']);
+                        const user = getInfoUser(idForm, ['name', 'birthday', 'gender', 'email', 'phone-number', 'password']);
                         window.localStorage.setItem(keyInput, JSON.stringify(user));
                         openAlert();
                         currentUser = user;
@@ -249,10 +272,10 @@ function submitForm(idForm, arraySelector) {
                     var pwdInputElement;
                     inputElements.forEach(function(inputElement) {
                         if(inputElement){
-                            if(inputElement.id === 'email'){
+                            if(inputElement.name === 'email'){
                                 keyInput = inputElement.value;
                             }
-                            if(inputElement.id === 'password'){
+                            if(inputElement.name === 'password'){
                                 pwdInputElement = inputElement;
                             }
                         }
@@ -322,4 +345,4 @@ const hiddenUser = () => {
     accountSection.classList.remove('close');
     accountLogin.classList.remove('show-user');
 }
-export {submitForm, resetForm, currentUser, showUser, hiddenUser};
+export {submitForm, resetForm, currentUser, showUser, hiddenUser, isValidationInputData};

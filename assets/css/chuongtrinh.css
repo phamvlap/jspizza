@@ -81,7 +81,7 @@ a{ text-decoration: none;}
 }
 .img-item{ 
     width:100%;
-    transition: 8s linear;
+    transition: 2s linear;
 }
 .img-item:hover{
     transform: scale(1.3);

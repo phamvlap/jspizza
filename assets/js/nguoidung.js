@@ -1,13 +1,7 @@
 import { hiddenUser, currentUser } from "./submit_form.js";
 
-// sign out account
-const signOutElement = document.querySelector('.sign-out');
-signOutElement.onclick = () => {
-    const tmpUser = null;
-    hiddenUser();
-    window.localStorage.setItem('currentUser', JSON.stringify(tmpUser));
-}
 
+// show info user
 const showInfoUser = () => {
     if(currentUser != null){
         const accountName = document.querySelector('.account-name strong');
@@ -27,7 +21,7 @@ const showInfoUser = () => {
                     case 'female':
                         infoElement.innerText = 'Nữ';
                         break;
-                    case 'orther':
+                    case 'other':
                         infoElement.innerText = 'Khác';
                         break;
                 }
@@ -38,3 +32,12 @@ const showInfoUser = () => {
     }
 }
 showInfoUser();
+
+const infoUser = document.querySelector('.info-user');
+infoUser.onclick = () => {
+    window.location.href = 'nguoidung.html';
+}
+const cartShopping = document.querySelector('.cart-shopping');
+cartShopping.onclick = () => {
+    window.location.href = 'cart.html';
+}
